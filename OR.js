@@ -15,6 +15,8 @@ Object.defineProperties(OR.prototype, {
 			if ((this.number_of_ports >= 3) && (this.C_current > result)) {
 				result = this.C_current;
 			} // repeat for each port
+			
+			return result;
 		}
 	}
 });
