@@ -18,8 +18,11 @@ Object.defineProperties(Selector.prototype, {
 			}
 		},
 		get: function() { // output signal
-			if (this.powered && this.active_port === 0) {
-				return this.A_current;
+			if (this.active_port === 0) {
+				if (this.passthrough) {
+					return this.A_current;
+				}
+				else { return 1; }
 			}
 		}
 	}, // repeat for the other ports
