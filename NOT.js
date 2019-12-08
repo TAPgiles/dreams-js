@@ -1,6 +1,6 @@
 function NOT() {
 }
-Object.defineProperties(XOR.prototype, {
+Object.defineProperties(NOT.prototype, {
 	result: {
 		set: function(value) { // input signal
 			this.current = value;
